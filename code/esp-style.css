@@ -1,0 +1,139 @@
+/**
+  Rui Santos
+  Complete project details at https://RandomNerdTutorials.com/cloud-weather-station-esp32-esp8266/
+
+  Permission is hereby granted, free of charge, to any person obtaining a copy
+  of this software and associated documentation files.
+
+  The above copyright notice and this permission notice shall be included in all
+  copies or substantial portions of the Software.
+**/
+body {
+    width: 60%;
+    margin: auto;
+    text-align: center;
+    font-family: Arial;
+    top: 50%;
+    left: 50%;
+}
+
+@media screen and (max-width: 800px) {
+    body {
+        width: 100%;
+    }
+}
+
+table {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+div {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+h2 { font-size: 2.5rem; }
+
+.header {
+	 padding: 1rem;
+	 margin: 0 0 2rem 0;
+	 background: #f2f2f2;
+}
+
+h1 {
+    font-size: 2rem;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.content {
+    display: flex;
+}
+
+@media screen and (max-width: 500px) /* Mobile */ {
+    .content {
+        flex-direction: column;
+    }
+}
+
+.mask {
+    position: relative;
+    overflow: hidden;
+    display: block;
+    width: 12.5rem;
+    height: 6.25rem;
+    margin: 1.25rem;
+}
+
+.semi-circle {
+    position: relative;
+    display: block;
+    width: 12.5rem;
+    height: 6.25rem;
+    background: linear-gradient(to right, #3498db 0%, #05b027 33%, #f1c40f 70%, #c0392b 100%);
+    border-radius: 50% 50% 50% 50% / 100% 100% 0% 0%;
+}
+
+.semi-circle::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    z-index: 2;
+    display: block;
+    width: 8.75rem;
+    height: 4.375rem;
+    margin-left: -4.375rem;
+    background: #fff;
+    border-radius: 50% 50% 50% 50% / 100% 100% 0% 0%;
+}
+
+.semi-circle--mask {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 12.5rem;
+    height: 12.5rem;
+    background: transparent;
+    transform: rotate(120deg) translate3d(0, 0, 0);
+    transform-origin: center center;
+    backface-visibility: hidden;
+    transition: all 0.3s ease-in-out;
+}
+
+.semi-circle--mask::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0%;
+    z-index: 2;
+    display: block;
+    width: 12.625rem;
+    height: 6.375rem;
+    margin: -1px 0 0 -1px;
+    background: #f2f2f2;
+    border-radius: 50% 50% 50% 50% / 100% 100% 0% 0%;
+}
+
+.gauge--2 .semi-circle { background: #3498db; }
+
+.gauge--2 .semi-circle--mask { transform: rotate(20deg) translate3d(0, 0, 0); }
+
+#tableReadings { border-collapse: collapse; }
+
+#tableReadings td, #tableReadings th {
+    border: 1px solid #ddd;
+    padding: 10px;
+}
+
+#tableReadings tr:nth-child(even){ background-color: #f2f2f2; }
+
+#tableReadings tr:hover { background-color: #ddd; }
+
+#tableReadings th {
+    padding: 10px;
+    background-color: #2f4468;
+    color: white;
+}
