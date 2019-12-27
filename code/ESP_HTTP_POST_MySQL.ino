@@ -50,7 +50,10 @@ Adafruit_BME280 bme;  // I2C
 // the following variables are unsigned longs because the time, measured in
 // milliseconds, will quickly become a bigger number than can be stored in an int.
 unsigned long lastTime = 0;
-unsigned long timerDelay = 600000;
+// Timer set to 10 minutes (600000)
+//unsigned long timerDelay = 600000;
+// Set timer to 30 seconds (30000)
+unsigned long timerDelay = 30000;
 
 void setup() {
   Serial.begin(115200);
@@ -71,6 +74,8 @@ void setup() {
     Serial.println("Could not find a valid BME280 sensor, check wiring or change I2C address!");
     while (1);
   }
+  
+  Serial.println("Timer set to 30 seconds (timerDelay variable), it will take 30 seconds before publishing the first reading.");
 }
 
 void loop() {
