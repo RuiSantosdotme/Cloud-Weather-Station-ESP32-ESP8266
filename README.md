@@ -4,4 +4,6 @@ Build a cloud weather station dashboard to visualize your ESP32 or ESP8266 senso
 
 Complete project details: https://RandomNerdTutorials.com/cloud-weather-station-esp32-esp8266/
 
+Video demonstration: https://youtu.be/C6BfIcshUy8
+
 [![Project Image](https://raw.githubusercontent.com/RuiSantosdotme/Cloud-Weather-Station-ESP32-ESP8266/master/project-image.png)](https://RandomNerdTutorials.com/cloud-weather-station-esp32-esp8266/)
