@@ -50,7 +50,7 @@ Adafruit_BME280 bme;  // I2C
 // the following variables are unsigned longs because the time, measured in
 // milliseconds, will quickly become a bigger number than can be stored in an int.
 unsigned long lastTime = 0;
-unsigned long timerDelay = 30000;
+unsigned long timerDelay = 600000;
 
 void setup() {
   Serial.begin(115200);
