@@ -59,11 +59,11 @@
 <body>
     <p>Last reading: <?php echo $last_reading_time; ?></p>
     <section class="content">
-	    <div class="box">
-	        <h3>TEMPERATURE</h3>
-            <div class="mask">
-			    <div class="semi-circle"></div>
-			    <div class="semi-circle--mask"></div>
+	    <div class="box gauge--1">
+	    <h3>TEMPERATURE</h3>
+              <div class="mask">
+			  <div class="semi-circle"></div>
+			  <div class="semi-circle--mask"></div>
 			</div>
 		    <p style="font-size: 30px;" id="temp">--</p>
 		    <table cellspacing="5" cellpadding="5">
@@ -159,12 +159,12 @@
     	//set range for Temperature in Celsius -5 Celsius to 38 Celsius
     	var minTemp = -5.0;
     	var maxTemp = 38.0;
-        //set range for Temperature in Fahrenheit 23 Celsius to 100 Fahrenheit
+        //set range for Temperature in Fahrenheit 23 Fahrenheit to 100 Fahrenheit
     	//var minTemp = 23;
     	//var maxTemp = 100;
 
     	var newVal = scaleValue(curVal, [minTemp, maxTemp], [0, 180]);
-    	$('.gauge--2 .semi-circle--mask').attr({
+    	$('.gauge--1 .semi-circle--mask').attr({
     		style: '-webkit-transform: rotate(' + newVal + 'deg);' +
     		'-moz-transform: rotate(' + newVal + 'deg);' +
     		'transform: rotate(' + newVal + 'deg);'
@@ -178,7 +178,7 @@
     	var maxHumi = 100;
 
     	var newVal = scaleValue(curVal, [minHumi, maxHumi], [0, 180]);
-    	$('.gauge--3 .semi-circle--mask').attr({
+    	$('.gauge--2 .semi-circle--mask').attr({
     		style: '-webkit-transform: rotate(' + newVal + 'deg);' +
     		'-moz-transform: rotate(' + newVal + 'deg);' +
     		'transform: rotate(' + newVal + 'deg);'
