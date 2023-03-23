@@ -10,7 +10,7 @@
 -->
 <?php
     include_once('esp-database.php');
-    if ($_GET["readingsCount"]){
+    if (isset($_GET["readingsCount"])){
       $data = $_GET["readingsCount"];
       $data = trim($data);
       $data = stripslashes($data);
